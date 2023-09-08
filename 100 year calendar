@@ -1,0 +1,275 @@
+#include <stdio.h>
+#include <conio.h>
+void leapyear(int);
+void JMMJAOD(int);
+int count2 = 0, count = 0;
+int year;
+
+int main()
+{
+    printf("____________________________________________________");
+    printf("Enter the year between 1950 and 2060");
+    printf("____________________________________________________\n");
+    scanf("%d", &year);
+
+    if (year % 4 == 0 || year % 400 == 0 || year % 100 == 0)
+    {
+
+        leapyear(29);
+    }
+    else
+    {
+        leapyear(28);
+    }
+    getch();
+
+    return 0;
+}
+
+void leapyear(int y)
+{
+    switch (year)
+    {
+    case 1950:
+    case 1956:
+    case 1961:
+    case 1967:
+    case 1978:
+    case 1984:
+    case 1989:
+    case 1995:
+    case 2006:
+    case 2012:
+    case 2017:
+    case 2023:
+    case 2034:
+    case 2040:
+    case 2045:
+    case 2051:
+        count2 = 0;
+        break;
+    case 1951:
+    case 1962:
+    case 1968:
+    case 1973:
+    case 1979:
+    case 1990:
+    case 1996:
+    case 2001:
+    case 2007:
+    case 2018:
+    case 2024:
+    case 2029:
+    case 2035:
+    case 2046:
+    case 2052:
+    case 2057:
+        count2 = 1;
+        break;
+    case 1952:
+    case 1957:
+    case 1963:
+    case 1974:
+    case 1980:
+    case 1985:
+    case 1991:
+    case 2002:
+    case 2008:
+    case 2013:
+    case 2019:
+    case 2030:
+    case 2036:
+    case 2041:
+    case 2047:
+    case 2058:
+        count2 = 2;
+        break;
+    case 1958:
+    case 1964:
+    case 1969:
+    case 1975:
+    case 1986:
+    case 1992:
+    case 2059:
+    case 1997:
+    case 2003:
+    case 2014:
+    case 2020:
+    case 2025:
+    case 2031:
+    case 2042:
+    case 2048:
+    case 2053:
+        count2 = 3;
+        break;
+    case 1953:
+    case 1959:
+    case 1970:
+    case 1976:
+    case 1981:
+    case 1987:
+    case 1998:
+    case 2004:
+    case 2009:
+    case 2015:
+    case 2026:
+    case 2032:
+    case 2037:
+    case 2043:
+    case 2054:
+    case 2060:
+        count2 = 4;
+        break;
+    case 1954:
+    case 1960:
+    case 1965:
+    case 1971:
+    case 1982:
+    case 1988:
+    case 1993:
+    case 1999:
+    case 2010:
+    case 2016:
+    case 2021:
+    case 2027:
+    case 2038:
+    case 2044:
+    case 2049:
+    case 2055:
+        count2 = 5;
+        break;
+    case 1955:
+    case 1966:
+    case 1972:
+    case 1977:
+    case 1983:
+    case 1994:
+    case 2000:
+    case 2005:
+    case 2011:
+    case 2022:
+    case 2028:
+    case 2033:
+    case 2050:
+    case 2056:
+    case 2039:
+        count2 = 6;
+        break;
+    default:
+        printf("Please enter year between 1950 and 2060");
+        break;
+    }
+    printf("\t\tJANUARY\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(1);
+    printf("\n\n");
+    printf("\t\tFEBRUARY\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(y);
+    printf("\n\n");
+    printf("\t\tMARCH\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(3);
+    printf("\n\n");
+    printf("\t\tAPRIL\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(4);
+    printf("\n\n");
+    printf("\t\tMAY\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(5);
+    printf("\n\n");
+    printf("\t\tJUNE\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(6);
+    printf("\n\n");
+    printf("\t\tJULY\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(7);
+    printf("\n\n");
+    printf("\t\tAUGUST\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(8);
+    printf("\n\n");
+    printf("\t\tSEPTEMBER\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(9);
+    printf("\n\n");
+    printf("\t\tOCTOBER\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(10);
+    printf("\n\n");
+    printf("\t\tNOVEMBER\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(11);
+    printf("\n\n");
+    printf("\t\tDECEMBER\n");
+    printf("SUN\tMON\tTUE\tWED\tTHU\tFRI\tSAT\n");
+    JMMJAOD(12);
+    printf("\n\n");
+}
+void JMMJAOD(int months)
+{
+    int l;
+    if (months == 1 || months == 3 || months == 5 || months == 7 || months == 8 || months == 10 || months == 12)
+    {
+        l = 31;
+    }
+    else
+        l = 30;
+    if (months == 28)
+    {
+        l = 28;
+    }
+    if (months == 29)
+    {
+        l = 29;
+    }
+    if (count2 == 1)
+    {
+        printf("\t");
+        count = 2;
+    }
+    else if (count2 == 2)
+    {
+
+        printf("\t\t");
+        count = 3;
+    }
+    else if (count2 == 3)
+    {
+
+        printf("\t\t\t");
+        count = 4;
+    }
+    else if (count2 == 4)
+    {
+
+        printf("\t\t\t\t");
+        count = 5;
+    }
+    else if (count2 == 5)
+    {
+
+        printf("\t\t\t\t\t");
+        count = 6;
+    }
+    else if (count2 == 6)
+    {
+        printf("\t\t\t\t\t\t");
+        count = 7;
+    }
+    for (int i = 1; i <= l; i++)
+    {
+
+        printf("%d\t", i);
+        if (count == 7)
+        {
+            printf("\n");
+            count = 0;
+        }
+        count++;
+        
+    }
+    count2 = (count2 + (l % 7)) % 7;
+}
