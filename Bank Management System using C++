@@ -1,0 +1,116 @@
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+using namespace std;
+
+class bank
+{
+    char name[100], father[100], addr[100], type[10];
+    float balance;
+
+public:
+    void open_account();
+    void deposit_money();
+    void withdraw_money();
+    void display_account();
+};
+
+void bank::open_account()
+{
+    cout << "\n Enter Your Full Name :";
+    cin.ignore();
+    cin.getline(name, 100);
+    cout << "\n Enter Your Father's Name :" ;
+    cin.getline(father, 100);
+    cout << "\n Enter Your Address :";
+    cin.getline(addr, 100);
+    cout << "\n Type of Account - 'Saving' or 'Current' :";
+    cin.getline(type, 100);
+    cout << "\n Enter Your First Deposit Amount :";
+    cin >> balance;
+    cout << "\nYour Account is created Successfully!" << endl;
+}
+
+void bank::deposit_money()
+{
+    int d;
+    cout << "\nEnter amount you want to deposit : " ;
+    cin >> d;
+    balance = balance + d;
+
+    cout << "\n"<< endl;
+    cout << "\n Your current/Total balance is : " << balance << endl;
+}
+void bank::withdraw_money()
+{
+    float w;
+    cout << "\nEnter Amount to Withdraw : ";
+    cin >> w;
+    balance = balance - w;
+
+    cout << "Your remaining balance is : " << balance << endl;
+}
+
+void bank::display_account()
+{
+    cout << "\nYour Name : " << name << endl;
+    cout << "\nYour father's name : " << father << endl;
+    cout << "\nYour Address : " << addr << endl;
+    cout << "\n Type of account :" << type << endl;
+    cout << "\n Total Balance : " << balance << endl;
+}
+int main()
+{
+    bank obj;
+    int ch;
+    char option;
+
+    cout << "\n --------------------Bank Management system--------------------" << endl;
+    do
+    {
+
+        cout << "\n1) Open Account :" ;
+        cout << "\n2) Deposite Money :" ;
+        cout << "\n3) Withdraw Money :" ;
+        cout << "\n4) Display Account  :" ;
+        cout << "\n5) Exit\n" ;
+
+        cin >> ch;
+        switch (ch)
+        {
+        case 1:
+            cout << "\n1) Open Account :" << endl;
+            obj.open_account();
+            break;
+        case 2:
+
+            cout << "\n2) Deposite Money :" << endl;
+            obj.deposit_money();
+            break;
+        case 3:
+            cout << "\n3) Withdraw Money :" << endl;
+            obj.withdraw_money();
+            break;
+        case 4:
+            cout << "\n4) Display Account :" << endl;
+            obj.display_account();
+            break;
+        case 5:
+            exit(1);
+
+        default:
+            cout << "\nPlease try again choose correct option !";
+            break;
+        }
+
+        cout << "\n Do you want to continue Banking withot exit? Press (y/n) !" << endl;
+        option = getch();
+        if (option == 'n' || option == 'N')
+        {
+            exit(0);
+        }
+
+    } while (option == 'y' || option == 'Y');
+
+    return 0;
+}
